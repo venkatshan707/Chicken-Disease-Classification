@@ -1,0 +1,9 @@
+artifacts_root: artifacts
+#This will create folder we can have folders and files will be used for project
+
+#It will create a folder called data_ingestion under artifacts and bring the input zip file
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: https://github.com/venkatshan707/DataSets/raw/main/Chicken-fecal-images.zip
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
