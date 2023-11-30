@@ -1,1 +1,8 @@
-key : value 
+AUGMENTATION: True
+IMAGE_SIZE: [224, 224, 3] # as per VGG 16 model mentioned in keras site
+BATCH_SIZE: 16  
+INCLUDE_TOP: False
+EPOCHS: 1
+CLASSES: 2 # with coccidiosis and healthy 
+WEIGHTS: imagenet
+LEARNING_RATE: 0.01
