@@ -1,5 +1,7 @@
 import setuptools
 
+#we are creating a local package of cnnClassifier
+
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 

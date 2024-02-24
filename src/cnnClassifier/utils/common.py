@@ -1,3 +1,6 @@
+# In the utils package, we do write the functions/code which
+# will be commonly used by other modules.
+
 import os
 from box.exceptions import BoxValueError
 import yaml
@@ -37,7 +40,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         raise e
     
 
-
+# we are creating artifcats directory and data ingestion directory for those we use this code
 @ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
     """create list of directories
@@ -51,7 +54,7 @@ def create_directories(path_to_directories: list, verbose=True):
         if verbose:
             logger.info(f"created directory at: {path}")
 
-
+# when we evaluation of the model , we do get loss and accuracy in json format
 @ensure_annotations
 def save_json(path: Path, data: dict):
     """save json data
@@ -67,7 +70,7 @@ def save_json(path: Path, data: dict):
 
 
 
-
+# for loading any json file we can use the below code
 @ensure_annotations
 def load_json(path: Path) -> ConfigBox:
     """load json files data
@@ -84,7 +87,7 @@ def load_json(path: Path) -> ConfigBox:
     logger.info(f"json file loaded succesfully from: {path}")
     return ConfigBox(content)
 
-
+# when we need to save any binary file, we can use the below code 
 @ensure_annotations
 def save_bin(data: Any, path: Path):
     """save binary file
@@ -96,7 +99,7 @@ def save_bin(data: Any, path: Path):
     joblib.dump(value=data, filename=path)
     logger.info(f"binary file saved at: {path}")
 
-
+# when we need to load any binary file, we can use the below code 
 @ensure_annotations
 def load_bin(path: Path) -> Any:
     """load binary data
@@ -111,6 +114,7 @@ def load_bin(path: Path) -> Any:
     logger.info(f"binary file loaded from: {path}")
     return data
 
+#when we need to get size of the path, we use it
 @ensure_annotations
 def get_size(path: Path) -> str:
     """get size in KB
@@ -125,6 +129,7 @@ def get_size(path: Path) -> str:
     return f"~ {size_in_kb} KB"
 
 
+# decoding the image and encoding the image to a base64 encoded string
 def decodeImage(imgstring, fileName):
     imgdata = base64.b64decode(imgstring)
     with open(fileName, 'wb') as f:

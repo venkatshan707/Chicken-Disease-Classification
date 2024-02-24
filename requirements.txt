@@ -1,18 +1,18 @@
-tensorflow
+tensorflow # Installing latest ver of TensorFlow
 pandas 
-dvc
+dvc # MLops Tool for tracking pipeline
 notebook
 numpy
 matplotlib
 seaborn
 python-box==6.0.2
-pyYAML
-tqdm
+pyYAML # To read yml files we need to import this package
+tqdm # to have the progress bar for execution
 ensure==1.0.2
 joblib
 types-PyYAML
 scipy
-Flask
+Flask # we are creating web application. so we are using flask
 Flask-Cors
-.
+-e . # To install the local package (setup.py) we are adding this line
 #pip install matplotlib seaborn python-box==6.0.2 pyYAML tqdm ensure==1.0.2 joblib types-PyYAML scipy Flask Flask-Cors --ignore-installed
