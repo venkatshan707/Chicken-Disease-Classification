@@ -7,12 +7,13 @@ logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
 project_name = "cnnClassifier"
 
+
+""" __init__.py  a special Python file that is used to indicate that the directory
+      it is present in a Python package. It can contain initialization code for the package, or it can be an empty file.
+"""
 list_of_files = [
     ".github/workflows/.gitkeep",
-    f"src/{project_name}/__init__.py",   
-    """ __init__.py  a special Python file that is used to indicate that the directory
-      it is present in is a Python package. t can contain initialization code for the package, or it can be an empty file.
-   """
+    f"src/{project_name}/__init__.py",     
     f"src/{project_name}/components/__init__.py",
     f"src/{project_name}/utils/__init__.py",
     f"src/{project_name}/config/__init__.py",
@@ -27,14 +28,16 @@ list_of_files = [
     "setup.py",
     "research/trials.ipynb",
     "templates/index.html",
+
     
 
 ]
 
 
 for filepath in list_of_files:   # for all the files 
-    filepath = Path(filepath)
-    filedir, filename = os.path.split(filepath)
+    filepath = Path(filepath) # By calling Path constructor on our filepath,
+    #our filepath recognizes as a directory in  the windows filesystem
+    filedir, filename = os.path.split(filepath) # returns file path and file name 
 
 
     if filedir !="": 
