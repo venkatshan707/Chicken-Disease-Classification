@@ -12,10 +12,15 @@ data_ingestion:
 
 prepare_base_model:
   root_dir: artifacts/prepare_base_model # Directory for saving base model
-  base_model_path: artifacts/prepare_base_model/base_model.h5 # downloading v16 base model in the locationa and saving as it is.
-  updated_base_model_path: artifacts/prepare_base_model/base_model_updated.h5 # adding custom layer with base model downlaoded
+  base_model_path: artifacts/prepare_base_model/base_model.keras # downloading v16 base model in the locationa and saving as it is.
+  updated_base_model_path: artifacts/prepare_base_model/base_model_updated.keras # adding custom layer with base model downlaoded
 
 prepare_callbacks:
   root_dir: artifacts/prepare_callbacks
   tensorboard_root_log_dir: artifacts/prepare_callbacks/tensorboard_log_dir # To view the track of model training
   checkpoint_model_filepath: artifacts/prepare_callbacks/checkpoint_dir/model.keras #To have checkpoints on model training. From one check point (after training some ephocs some checkpoints will be saved) we can resume traing as well
+
+
+training:
+  root_dir: artifacts/training
+  trained_model_path: artifacts/training/model.keras
