@@ -14,6 +14,9 @@ from typing import Any
 import base64
 
 
+# Ensure annotations: is not a built-in decorator which is used here 
+#allowing you to specify the which types of function arguments only you can be received and 
+# the type of data that function can return. ( in read_yaml it only accepts Path type input and returns ConfigBox  type output)
 
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
