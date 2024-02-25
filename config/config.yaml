@@ -18,4 +18,4 @@ prepare_base_model:
 prepare_callbacks:
   root_dir: artifacts/prepare_callbacks
   tensorboard_root_log_dir: artifacts/prepare_callbacks/tensorboard_log_dir # To view the track of model training
-  checkpoint_model_filepath: artifacts/prepare_callbacks/checkpoint_dir/model.h5 #To have checkpoints on model training. From one check point (after training some ephocs some checkpoints will be saved) we can resume traing as well
+  checkpoint_model_filepath: artifacts/prepare_callbacks/checkpoint_dir/model.keras #To have checkpoints on model training. From one check point (after training some ephocs some checkpoints will be saved) we can resume traing as well
