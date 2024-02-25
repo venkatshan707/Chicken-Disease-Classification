@@ -1,8 +1,23 @@
-AUGMENTATION: True
+# We are performing Tranfer Learning approach on model creation by using VGG 16 model from keras
+#In traditional machine learning, models are typically trained from scratch on a specific task using a large dataset. However, in transfer learning, instead of starting the learning process from scratch, the model leverages knowledge learned from solving one task and applies it to a different but related task.
+AUGMENTATION: True #Image Augmentation: Random rotations, flips, and translations. Changes in brightness, contrast, and saturation. Adding noise or blur
 IMAGE_SIZE: [224, 224, 3] # as per VGG 16 model mentioned in keras site
+
 BATCH_SIZE: 16  
+# This parameter determines the number of samples that will be propagated through the neural network at once during a single training iteration or epoch
+#A larger size need more power for training and less size value leads to slower training 
+
+
 INCLUDE_TOP: False
+#When using transfer learning, setting INCLUDE_TOP to False allows you to add your own custom dense layers suited to your specific classification task.
+
+
 EPOCHS: 1
-CLASSES: 2 # with coccidiosis and healthy 
+#Each epoch consists of one forward pass (computing predictions), one backward pass (computing gradients), and one optimization step (updating model parameters).
+
+CLASSES: 2 # with two outputs as coccidiosis and healthy 
+
 WEIGHTS: imagenet
+#When you specify WEIGHTS: imagenet, it typically means that you're initializing the model with the weights that were learned during pre-training on the ImageNet dataset
+
 LEARNING_RATE: 0.01
