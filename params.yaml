@@ -12,7 +12,7 @@ INCLUDE_TOP: False
 #When using transfer learning, setting INCLUDE_TOP to False allows you to add your own custom dense layers suited to your specific classification task.
 
 
-EPOCHS: 1
+EPOCHS: 2
 #Each epoch consists of one forward pass (computing predictions), one backward pass (computing gradients), and one optimization step (updating model parameters).
 
 CLASSES: 2 # with two outputs as coccidiosis and healthy 
